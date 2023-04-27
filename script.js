@@ -229,3 +229,96 @@ console.log(Object.keys(options).length);
 
 /* Array */
 
+/*
+
+let arr = [1, 2, 3];
+
+arr.push('Dima');
+
+console.log(arr);
+
+arr.pop();
+
+console.log(arr);
+
+*/
+
+/*
+
+let obj = {
+    color: 'blue',
+    bg: 'black',
+};
+
+let arr = [0, 1, obj];
+
+console.log(arr[2]);
+
+*/
+
+/* Перебор массива */
+
+/* 
+
+let arr = [0, 1, 2, 3, 4, 5];
+
+for (i = 0; i < arr.length; i++){
+    alert(arr[i]);
+} 
+
+*/
+
+/*
+
+let arr = [0, 1, 2, 3, 4, 5];
+
+for (let value of arr) {
+    alert(value);
+}
+
+*/
+
+/*
+
+let arr = [0, 1, 2, 3, 4, 5];
+
+arr.forEach(function(item, i, arr){
+    console.log(`${i}: ${item} inside array ${arr}`);
+});
+
+*/
+
+/*
+
+let str = prompt('','');
+
+let products = str.split(', ');
+
+console.log(products.join('; '));
+
+*/
+
+/*
+
+let str = prompt('','');
+
+let products = str.split(', ');
+products.sort();
+
+console.log(products.join('; '));
+
+*/
+
+/*
+
+let arr = [30, 22, 31, 6, 4, 5];
+
+arr.sort(compareNum);
+
+console.log(arr);
+
+function compareNum(a, b){
+return a - b;
+}
+
+*/
