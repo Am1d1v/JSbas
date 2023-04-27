@@ -322,3 +322,109 @@ return a - b;
 }
 
 */
+
+/*
+
+let obj = {
+    a: 6,
+    b: 3
+};
+
+
+let copy = obj;
+/* передаёт ссылку на объект
+
+copy.a = 10;
+
+console.log(copy.a);
+console.log(obj);
+
+*/
+
+//* Поверхностная копия объекта
+
+function copy(mainObj){
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj;
+    }
+    return objCopy;
+}
+
+let numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 6,
+        y: 9
+    }
+};
+
+let newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+
+// object.assign()
+
+let add = {
+    d: 18,
+    i: 3,
+};
+
+console.log(Object.assign(numbers, add));
+let clone = Object.assign({}, add); //Получаем отдельную копию
+
+clone.d = 9;
+console.log(add);
+console.log(clone);
+
+let oldArray = ['a', 'b', 'c'];
+//let newArray = oldArray; //newArray будет ссылаться на oldArray
+let newArray = oldArray.slice();
+
+newArray[1] = 'Hello';
+console.log(newArray);
+console.log(oldArray);
+
+//spread-оператор
+
+let video = ['YouTube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejournal', 'blogger'],
+    internet = [...video,...blogs, 'vk'];
+
+    console.log(internet);
+
+    function log(q, o, p){
+        console.log(q);
+        console.log(o);
+        console.log(p);
+    }
+
+    let num = [1, 2, 3];
+
+    log(...num);
+
+    let array = ['a', 'b'];
+
+    let newAaray = [...array]; // В переменной newAaray лежит копия массива array
+
+    newAaray[0] = 3;
+
+    console.log(newAaray);
+    console.log(array);
+
+    let l = {
+        one: 1,
+        two: 2
+    };
+
+    let newest = {...l};
+
+    console.log(newest);
